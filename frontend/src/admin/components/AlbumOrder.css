@@ -1,0 +1,41 @@
+.album-form__container {
+    background-image: url('../../../public/assets/images/AlbumOrder.jpg');
+    width: 1500px;
+  height: 1000px;
+}
+.album-form__model{
+  position: relative;
+  top: 300px;
+  left: 450px; 
+  font-size: 32px; 
+}
+
+
+.album-form__ebat{
+
+    position: relative;
+    top: 330px;
+    left: 450px; 
+    font-size: 32px; 
+    
+}
+.album-form__set{
+    position: relative;
+    top: 360px;
+    left: 450px; 
+    font-size: 32px; 
+}
+.album-form__cover{
+    position: relative;
+    top: 390px;
+    left: 750px; 
+    font-size: 32px; 
+    
+}
+.album-form__adres{
+    position: relative;
+    top: 670px;
+    left: 480px; 
+    font-size: 32px; 
+    
+}

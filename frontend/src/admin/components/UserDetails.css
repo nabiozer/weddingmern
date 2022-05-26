@@ -1,0 +1,139 @@
+
+.color {
+    background-color: #be8a63;
+    height:4rem;
+}
+
+.userdetails-section {
+    display: flex;
+flex-direction: column;
+padding-left:1rem;
+padding-right:1rem;
+justify-content:center;
+}
+.userdetails-section h4 {
+   
+    font-size:1.5rem;
+}
+
+.userdetails-container {
+    margin: 1rem auto;
+    width: 100%;
+
+   
+}
+
+
+.userdetails-form__update__form {
+   margin: 2rem auto;
+   padding-left:1rem 0;
+   max-width: 800px;
+   justify-content: center;
+   display: flex;
+   flex-direction:column;
+   justify-content:center;
+   
+}
+
+.userdetails-form__chosen__container {
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+.userdetails-form__button {
+    background-color:rgb(169, 126, 18);
+    color: white;
+    border: none;
+    padding: 0.4rem;
+    width: 8rem;
+    height: 3rem;
+    margin: 1rem 0.5rem;
+    border-radius: 10px;
+    
+}
+
+
+
+
+.userdetails__form__group {
+    display: flex;
+    flex-direction: column;
+    line-height:1rem;
+
+    
+}
+.userdetails__form__group input {
+    border-color: rgb(169, 126, 18);
+    border-top: none;
+    border-left: none;
+    border-right: none;
+    margin-top: 0.8rem;
+    margin-bottom: 0.8rem;
+    
+    box-shadow:none;
+    line-height:1.2rem;
+    text-align: right;
+}
+.userdetails__form__group input:focus {
+   outline: none;
+   color:rgb(169, 126, 18);
+}
+
+
+
+
+.userdetails__album {
+    display: flex;
+    flex-direction: row;
+}
+
+.album-form__section button {
+    background-color:rgb(169, 126, 18);
+    color: white;
+    border: none;
+    padding: 0.4rem;
+    width: 8rem;
+    height: 3rem;
+    margin: 1rem auto;
+    border-radius: 10px;
+}
+
+.icon {
+    margin-left:1rem;
+}
+.userdetails-back__btn {
+    background-color:#284D43;
+    color: white;
+    border: none;
+    padding: 0.4rem;
+    width: 8rem;
+    height: 2rem;
+    margin: 1rem auto;
+    border-radius: 10px;
+    width:8rem;
+
+}
+
+.userdetails-back__btn a {
+    text-decoration: none;
+    color: white;
+}
+
+.userdetails-form__chosen {
+    display: flex;
+    flex-direction: column;
+    flex-wrap: wrap;
+    height:500px;
+    max-width:800px;
+    width:100%;
+   
+    border:1px solid #be8a63;
+    list-style: none;
+}
+.userdetails-form__chosen li {
+    line-height:2rem;
+    border-bottom: 1px solid #be8a63;
+}

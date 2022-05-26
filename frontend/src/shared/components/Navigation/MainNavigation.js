@@ -4,7 +4,7 @@ import { Link } from 'react-router-dom';
 import MainHeader from './MainHeader';
 import NavLinks from './NavLinks';
 import SideDrawer from './SideDrawer';
-import Backdrop from '../UIElements/Backdrop';
+import Backdrop from '../../UIElements/Backdrop'
 import './MainNavigation.css';
 
 const MainNavigation = props => {
@@ -28,6 +28,7 @@ const MainNavigation = props => {
       </SideDrawer>
 
       <MainHeader>
+     
         <button
           className="main-navigation__menu-btn"
           onClick={openDrawerHandler}
@@ -37,7 +38,7 @@ const MainNavigation = props => {
           <span />
         </button>
         <h1 className="main-navigation__title">
-          <Link to="/">YourPlaces</Link>
+          <Link to="/">NNPHOTOFILM</Link>
         </h1>
         <nav className="main-navigation__header-nav">
           <NavLinks />

@@ -1,0 +1,43 @@
+
+
+.profile-container {
+   display: flex;
+   width: 100%;
+   margin-top: 1rem;
+
+   justify-content: center;
+   text-align: center;
+  
+}
+
+
+.profile-container__reservationheader {
+    width: 100%;
+    background-color: whitesmoke;
+}
+
+.profile-container__reservation{
+  
+    
+    padding: 1rem;
+    margin: 0 auto;
+ 
+}
+.profile-container__choices{
+
+    padding: 1rem;
+    margin: 0 auto;
+    
+    
+}
+
+.profile-container__download {
+    width: 10rem;
+    margin: 1rem auto;
+    padding: 1rem;
+    border-radius: 100px;
+    color: white;
+    background-color: rgb(169, 126, 18);
+    display:block;
+    text-decoration: none;
+}

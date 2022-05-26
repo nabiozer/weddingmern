@@ -1,0 +1,43 @@
+.checkout-container {
+    display: flex;
+    flex-direction: row;
+    background-color:red;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+}
+
+.checkout-container ul {
+    display: flex;
+    flex-direction: row;
+    justify-content:center;
+    width: 100%;
+    text-align: center;
+    margin: 10px auto;
+    height:4rem;
+}
+
+.checkout-container ul li{
+    display: flex;
+    flex-direction: row;
+    justify-content:center;
+    vertical-align: middle;
+ 
+    text-align: center;
+    margin: 0 auto;
+    align-items: center;
+   
+   
+}
+.checkout-container ul li a {
+    text-decoration: none;
+    border: 2px solid #be8a63;
+    justify-content:center;
+    align-items:center;
+    border-radius: 5px;
+    padding: 7px;
+    color: black;
+    text-align: center;
+    vertical-align: middle;
+}
+

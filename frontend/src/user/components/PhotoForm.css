@@ -1,0 +1,88 @@
+.photo-form__section{
+    display: flex;
+    flex-direction: column;
+    padding-left:1rem;
+    padding-right:1rem;
+    justify-content:center;
+    
+    margin:0 auto;
+    max-width:800px;
+    }
+    
+    .photo-form__choices__first{
+        width: 100%;
+        margin-top:10px;
+        line-height:1.3rem;
+        border-bottom: 1px solid rgb(169, 126, 18);;
+    }
+    
+    .photo-form__choices {
+        width: 100%;
+        margin:2rem auto; 
+    }
+    
+    .photo-form__form__group {
+        display: flex;
+        flex-direction: row;
+        align-items: center;
+        line-height:1rem;
+        
+       
+        
+    }
+
+  
+    .photo-form__form__group input {
+        border-color: rgb(169, 126, 18);
+        border-top: none;
+        border-left: none;
+        border-right: none;
+        
+        margin-bottom: 0.8rem;
+        margin-left: 1rem;
+        line-height:1.2rem;
+        text-align: right;
+    }
+    .photo-form__form__group input:focus {
+       outline: none;
+       color:rgb(169, 126, 18);
+    }
+    
+    
+    
+    
+ 
+    
+    .photo-form__section button {
+        background-color:rgb(169, 126, 18);
+        color: white;
+        border: none;
+        padding: 0.4rem;
+        width: 4rem;
+        height: 2rem;
+        margin: 1rem 2rem;
+        border-radius: 10px;
+    }
+    .photoform-list__item {
+        list-style: none;
+    }
+
+    .photoform-list{
+        display: flex;
+        flex-direction: row;
+       flex-wrap: wrap;
+    }
+
+    .photoform-list__link {
+        display:block;
+        background-color:#284D43;
+    color: white;
+    border: none;
+    padding: 0.4rem;
+    width: 10rem;
+    height: 3rem;
+    margin: 0 auto;
+    border-radius: 10px;
+    width:8rem;
+    text-decoration: none;
+    }

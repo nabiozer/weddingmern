@@ -1,0 +1,22 @@
+.card-container-img {
+   width: 375px;
+   display: flex;
+   flex-direction: column;
+   justify-content: flex-start;
+   margin: 1rem auto;
+
+}
+
+
+
+@media (min-width: 768px) {
+    .card-container {
+        width: 23%;
+        height: 23%;
+        margin-top: 1rem;
+        margin-left: 2px;
+        margin-right: 2px;
+        transition: all 0.4 ease-in-out;
+    
+    }
+  }

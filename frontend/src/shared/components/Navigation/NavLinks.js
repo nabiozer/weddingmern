@@ -1,37 +1,46 @@
-import React, { useContext } from 'react';
-import { NavLink } from 'react-router-dom';
+import React from "react";
+import { NavLink ,useHistory} from "react-router-dom";
+import { useSelector, useDispatch } from "react-redux";
+import {logout} from '../../../store/user-actions'
+import "./NavLinks.css";
 
+const NavLinks = (props) => {
+  const history = useHistory()
+  const dispatch = useDispatch();
+  const userLogin = useSelector((state) => state.user.userLogin);
+  const { userInfo } = userLogin;
 
-import './NavLinks.css';
-
-const NavLinks = props => {
-  const auth = useContext(AuthContext);
-
+  const logoutHandler = () => {
+    dispatch(logout())
+    history.push('/login')
+  }
   return (
     <ul className="nav-links">
       <li>
         <NavLink to="/" exact>
-          ALL USERS
+          Ana Sayfa
         </NavLink>
       </li>
-      {auth.isLoggedIn && (
-        <li>
-          <NavLink to="/u1/places">MY PLACES</NavLink>
+
+      <li>
+        <NavLink to="/packages">Paketlerimiz</NavLink>
+      </li>
+
+      <li>
+        <NavLink to="/albums">Albümlerimiz</NavLink>
+      </li>
+      <li></li>
+      {userInfo ? (
+        <li className="dropdown">
+          {!userInfo.isAdmin ? ( <NavLink to="/profile">({userInfo.name})</NavLink>) :  <NavLink to="/admin">({userInfo.name})</NavLink>}
+     
+         
+            <button onClick={logoutHandler}>Çıkış</button>
+          
         </li>
-      )}
-      {auth.isLoggedIn && (
+      ) : (
         <li>
-          <NavLink to="/places/new">ADD PLACE</NavLink>
-        </li>
-      )}
-      {!auth.isLoggedIn && (
-        <li>
-          <NavLink to="/auth">AUTHENTICATE</NavLink>
-        </li>
-      )}
-      {auth.isLoggedIn && (
-        <li>
-          <button onClick={auth.logout}>LOGOUT</button>
+          <NavLink to="/login">Giriş</NavLink>
         </li>
       )}
     </ul>

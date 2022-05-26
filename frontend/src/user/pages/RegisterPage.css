@@ -1,0 +1,44 @@
+.register-form {
+
+    padding: 3rem;
+    margin: 0 auto;
+    max-width:50rem;
+    
+}
+
+
+.register-form__group {
+    display: flex;
+    flex-direction: column;
+    line-height:1rem;
+
+    
+}
+.register-form__group input {
+    border-color: rgb(169, 126, 18);
+    border-top: none;
+    border-left: none;
+    border-right: none;
+    margin-top: 0.8rem;
+    margin-bottom: 0.8rem;
+    
+    box-shadow:none;
+    line-height:1.2rem;
+    text-align: right;
+}
+.register-form__group input:focus {
+   outline: none;
+   color:rgb(169, 126, 18);
+}
+.register-form__btn {
+    background-color:#284D43;
+    color: white;
+    border: none;
+    padding: 0.4rem;
+    width: 8rem;
+    height: 2rem;
+    margin: 1rem auto;
+    border-radius: 10px;
+    width:8rem;
+
+}

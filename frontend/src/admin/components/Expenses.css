@@ -1,0 +1,17 @@
+.expenses-form {
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+    align-items: center;
+   
+
+}
+
+.expense-form__group {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+   width: 50%;
+}
+

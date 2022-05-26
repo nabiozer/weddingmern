@@ -1,0 +1,35 @@
+.choice-form__album {
+    display: flex;
+    width: 100%;
+    flex-direction: column;
+    margin-top: 10px;
+    margin-bottom: 10px;
+    justify-content:center;
+    align-items: center;
+}
+.choice-form__album form {
+    width: 100%;
+    display: flex;
+    
+}
+
+.choice-form__form {
+    width:100%;
+    border: 1px solid #be8a63;
+   
+    border-radius:2px;
+  
+   
+    
+}
+.choice-form__choices {
+    width:100%;
+    border: 1px solid #be8a63;
+    box-shadow:1px 1px 1px 1px #be8a63;
+    padding:10px;
+    border-radius:2px;
+    margin-right: 20px;
+    height:100%
+   
+}
+

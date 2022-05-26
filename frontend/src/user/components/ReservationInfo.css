@@ -1,0 +1,33 @@
+.reservation-container {
+    display:flex;
+    flex-direction: column;
+    width: 100%;
+    margin: 0 auto;
+    justify-content:center;
+    align-items: center;
+    line-height:2rem;
+    border:1px solid  #be8a63;
+    border-radius:40px;
+    box-shadow: 1px 1px 1px 1px#888888;
+    background-color:White;
+    max-width: 1000px;
+    overflow: hidden;
+   
+    
+
+
+}
+.reservation-container div {
+    border-bottom:1px solid #be8a63;
+    width: 100%;
+   
+    
+}
+
+.reservation-section {
+
+display: flex;
+flex-direction: column;
+justify-content:center;;
+
+}

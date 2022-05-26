@@ -1,0 +1,36 @@
+.admin-section {
+    display: flex;
+    flex-direction: column;
+    
+}
+.admin-first div{
+    border: 1px solid #be8a63;
+    display: flex;
+    justify-content: center;
+    padding:1rem;
+    width: 80%;
+    margin: 0 auto;
+}
+
+.admin-first div h3{
+   margin-right: 1rem;
+}
+.admin-first div p {
+    font-size: 1.3rem
+}
+
+.admin-second div{
+    border: 1px solid #be8a63;
+    display: flex;
+    justify-content: center;
+    padding:1rem;
+    width: 80%;
+    margin: 0 auto;
+}
+
+.admin-second div h3{
+   margin-right: 1rem;
+}
+.admin-second div p {
+    font-size: 1.3rem
+}
