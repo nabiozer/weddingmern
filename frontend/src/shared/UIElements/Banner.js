@@ -13,7 +13,7 @@ const Banner = () => {
      if(!photos[0]) {
       dispatch(getPhotos())
      }
-   
+    // eslint-disable-next-line
   }, [dispatch])
 
   const incrementHandler = () => {

@@ -1,5 +1,5 @@
-import React, { useState, useEffect } from "react";
-import { Link, useLocation, useHistory } from "react-router-dom";
+import React, { useState } from "react";
+import {   useHistory } from "react-router-dom";
 import { useSelector, useDispatch } from "react-redux";
 import { register } from "../../store/user-actions";
 import {listUsers} from '../../store/user-actions'
@@ -11,8 +11,8 @@ const RegisterPage = () => {
   const history = useHistory();
 
   const userRegister = useSelector((state) => state.user.userRegister);
-  const { loading, error, userInfo ,success} = userRegister;
-  const location = useLocation();
+  const { loading, error} = userRegister;
+ 
 
   const [name, setName] = useState("");
   const [email, setEmail] = useState("");

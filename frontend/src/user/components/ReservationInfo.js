@@ -3,7 +3,7 @@ import { useSelector } from 'react-redux';
 import './ReservationInfo.css'
 const ReservationInfo = () => {
     const userDetails = useSelector((state) => state.user.userDetails);
-  const { loading, error, user } = userDetails;
+  const { user } = userDetails;
 
   return (
       <div className='reservation-section'>

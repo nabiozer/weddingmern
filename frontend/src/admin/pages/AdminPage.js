@@ -8,7 +8,7 @@ import {  useHistory } from "react-router-dom";
 import AdminNav from "../components/AdminNav";
 import './AdminPage.css'
 import { listExpenses } from "../../store/expense-actions";
-import Loader from "../../shared/components/Loader";
+
 
 
 const AdminPage = () => {
@@ -17,7 +17,7 @@ const AdminPage = () => {
   const userList = useSelector((state) => state.user.userList);
   const userLogin = useSelector((state) => state.user.userLogin);
   const expenseList = useSelector((state) => state.expense.expenseList);
-  const { error, loading, success } = userList;
+  const {  success } = userList;
   const { userInfo } = userLogin;
 
   const userDelete = useSelector((state) => state.user.userDelete);

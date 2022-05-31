@@ -14,7 +14,8 @@ const UserCard = ({
   chosen,
   deliveryInfo,
   album,
-  id,key
+  id,
+  myKey
 }) => {
 
 
@@ -32,7 +33,7 @@ const UserCard = ({
     <>
  
    
-        <tr key={key}>
+        <tr key={myKey}>
             <td>{name}</td>
             <td>{email}</td>
             <td>{reservationInfo.date}</td>

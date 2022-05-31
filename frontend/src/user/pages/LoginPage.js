@@ -1,8 +1,8 @@
 import React,{useState,useEffect} from "react";
-import { Link ,useLocation,useHistory} from "react-router-dom";
+import { useLocation,useHistory} from "react-router-dom";
 import {useSelector,useDispatch} from "react-redux"
-import {login,getUserDetails,listUsers} from '../../store/user-actions'
-import Banner from "../../shared/UIElements/Banner";
+import {login} from '../../store/user-actions'
+
 
 import "./LoginPage.css";
 import Loader from "../../shared/components/Loader";
@@ -39,13 +39,13 @@ const LoginPage = () => {
         
           <div className='login-form__group'>
             <label htmlFor="email">Email</label>
-            <input type="text" id="email" 
+            <input type="text" id="email" required
             value={email} onChange={(e) => setEmail(e.target.value)} />
           </div>
         
         <div className='login-form__group'>
           <label htmlFor="password">Şifre</label>
-          <input type="password" id="password" 
+          <input type="password" id="password"  required
             value={password} onChange={(e) => setPassword(e.target.value)}
           />
         </div>

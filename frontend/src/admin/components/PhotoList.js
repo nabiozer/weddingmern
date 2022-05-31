@@ -17,13 +17,13 @@ const PhotoList = () => {
   const { userInfo } = userLogin;
 
   const photoList = useSelector((state) => state.photo);
-  const { loadingPhotos, isLoading, error, photos } = photoList;
+  const {  isLoading, error, photos } = photoList;
   const [showByProp, setshowByProp] = useState("all");
   const deletedPhoto = useSelector((state) => state.photo.photoDelete);
   const {
     loading: loadingDelete,
     success: successDelete,
-    error: errorDelete,
+    
   } = deletedPhoto;
 
   const filterHandler = (e) => {
@@ -67,7 +67,7 @@ const PhotoList = () => {
         Fotoğraf Ekle
       </button>
       <div>
-      <label for="prop">Fotoğraf Türü</label>
+      <label htmlFor="prop">Fotoğraf Türü</label>
         <select onChange={filterHandler} name="prop" id="prop">
           <option value="all">hepsi</option>
           <option value="home">Ana Sayfa</option>
@@ -81,7 +81,7 @@ const PhotoList = () => {
 
       {isLoading ?  <Loader /> : 
       <div className="table-container">
-        <table class="fl-table">
+        <table className="fl-table">
           <thead>
             <tr>
               <th>PROPERTY</th>
@@ -98,6 +98,7 @@ const PhotoList = () => {
                     <tr key={photo._id}>
                       <td>{photo.property}</td>
                       <td>{index + 1}</td>
+                      <td>{photo.image}</td>
 
                       <td>
                         <Link to={`/admin/photo/${photo._id}/edit`}>
@@ -125,6 +126,8 @@ const PhotoList = () => {
                     <tr key={photo._id}>
                       <td>{photo.property}</td>
                       <td>{index + 1}</td>
+                      <td>{photo.image}</td>
+
 
                       <td>
                         <Link to={`/admin/photo/${photo._id}/edit`}>

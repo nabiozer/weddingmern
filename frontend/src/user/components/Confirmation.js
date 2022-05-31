@@ -1,7 +1,7 @@
 import React from 'react'
 import CheckOutSteps from './CheckOutSteps'
 import { useSelector,useDispatch } from 'react-redux'
-import { choiceActions } from "../../store/choice-slice";
+
 import {updateUserProfile,getUserDetails} from '../../store/user-actions'
 import {useHistory} from 'react-router-dom'
 import './Confirmation.css'

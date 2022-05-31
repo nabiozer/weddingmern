@@ -20,7 +20,7 @@ const PhotoEdit = () => {
   const [uploading,setUploading] = useState(false)
 
   const photoDetails = useSelector(state=> state.photo.photoDetails)
-  const {loading,error,detailsPhoto} = photoDetails
+  const {detailsPhoto} = photoDetails
 
   const photoUpdate = useSelector(state=> state.photo.photoUpdate)
   const {loading:loadingUpdate,success:successUpdate, error:errorUpdate } = photoUpdate
@@ -48,10 +48,7 @@ const PhotoEdit = () => {
     dispatch(updatePhoto({_id:id , property, description,image,ul,packageName,packagePrice}))
     e.preventDefault()
   }
-  const propertyChangeHandler = (e) => {
-    setProperty(e.target.value)
-    console.log(e.target.value)
-  }
+  
 
   const uploadFileHandler = async (e) => {
     const file = e.target.files[0]
@@ -70,6 +67,7 @@ const PhotoEdit = () => {
 
       setImage(data)
       setUploading(false)
+      console.log(uploading)
     } catch (error) {
       console.error(error)
       setUploading(false)
@@ -83,7 +81,7 @@ const PhotoEdit = () => {
     <div>
           <button className="userdetails-back__btn" style={{margin:'1rem',height:'3rem'}}>
             <Link to="/admin/photolist">
-              Fotoğraf Listesi <i class="fa-solid fa-arrow-left"></i>{" "}
+              Fotoğraf Listesi <i className="fa-solid fa-arrow-left"></i>{" "}
             </Link>
           </button>
         </div>
@@ -107,18 +105,18 @@ const PhotoEdit = () => {
         <div className='photoedit-form__group'>
             <label htmlFor="image">Image</label>
             <input type="text" id="image" 
-            value={image} onChange={(e) => setImage(e.target.value)} />
+            value={image || ''} onChange={(e) => setImage(e.target.value)} />
           </div>
           <div className='photoedit-form__group'>
             <label htmlFor="property">Property</label>
             <input type="text" id="property" 
-            value={property} onChange={propertyChangeHandler} />
+            value={property || ''} onChange={(e) => setProperty(e.target.value)} />
           </div>
         
         <div className='photoedit-form__group'>
           <label htmlFor="description">Description</label>
           <input type="text" id="description" 
-            value={description} onChange={(e) => setDescription(e.target.value)}
+            value={description || ''} onChange={(e) => setDescription(e.target.value)}
           />
         </div>
 
@@ -130,7 +128,7 @@ const PhotoEdit = () => {
           <div className='photoedit-form__group' >
           <label htmlFor="ul">Paket Adı</label>
           <input type="text" id="ul" 
-            value={packageName} onChange={(e) => setPackageName(e.target.value)}
+            value={packageName || ''} onChange={(e) => setPackageName(e.target.value)}
           />
         </div>
           
@@ -138,14 +136,14 @@ const PhotoEdit = () => {
           <div className='photoedit-form__group'>
           <label htmlFor="ul">Paket İçeriği</label>
           <input type="text" id="ul" 
-            value={ul} onChange={(e) => setUl(e.target.value)}
+            value={ul || ''} onChange={(e) => setUl(e.target.value)}
           />
         </div>
 
         <div className='photoedit-form__group'>
           <label htmlFor="packageprice">Paket Fiyatı</label>
           <input type="text" id="packageprice" 
-            value={packagePrice} onChange={(e) => setPackagePrice(e.target.value)}
+            value={packagePrice || ''} onChange={(e) => setPackagePrice(e.target.value)}
           />
         </div>
         </div>}

@@ -1,14 +1,11 @@
 import React from "react";
-import { NavLink ,useHistory} from "react-router-dom";
-import { useSelector, useDispatch } from "react-redux";
+import { NavLink} from "react-router-dom";
+
 
 import './AdminNav.css'
 
 const AdminNav = (props) => {
-  const history = useHistory()
-  const dispatch = useDispatch();
-  const userLogin = useSelector((state) => state.user.userLogin);
-  const { userInfo } = userLogin;
+
 
 
   return (

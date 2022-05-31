@@ -1,14 +1,16 @@
 import React,{useState,useEffect} from 'react'
 import {useDispatch,useSelector} from 'react-redux';
+import {useHistory} from 'react-router-dom'
 import { choiceActions } from '../../store/choice-slice';
 import { getUserDetails } from "../../store/user-actions";
-import {useParams} from 'react-router-dom'
+
 import {Link} from 'react-router-dom'
 
 import './AlbumForm.css'
 import CheckOutSteps from './CheckOutSteps';
 const AlbumForm = (props) => {
-    const {id} = useParams()
+  const history =  useHistory();
+    
     const dispatch = useDispatch();
     const choices = useSelector((state) => state.choices.chosen)
     const user = useSelector((state) => state.user.userDetails.user)
@@ -37,6 +39,13 @@ const AlbumForm = (props) => {
     const albumSubmitHandler = (e) => {
       e.preventDefault();
       dispatch(choiceActions.addAlbumCoices({albumName,colorCode,coverText,poster,cover}))
+    }
+
+
+    const albumAddPushHandler = (e) => {
+      e.preventDefault();
+      dispatch(choiceActions.addAlbumCoices({albumName,colorCode,coverText,poster,cover}))
+      history.push('/profile/photoform')
     }
 
 
@@ -101,7 +110,7 @@ const AlbumForm = (props) => {
 
         </div>
         </div>
-          {!props.show && <Link to='photoform' className='album-form-list__link'>Seçimleri Onayla ve Fotoğraf Seçimine İlerle</Link>}
+          {!props.show && <Link to='photoform' className='album-form-list__link' onClick={albumAddPushHandler}>Seçimleri Onayla ve Fotoğraf Seçimine İlerle</Link>}
         </section>
         </>
   )

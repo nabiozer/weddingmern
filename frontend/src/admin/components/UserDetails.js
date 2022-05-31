@@ -223,7 +223,7 @@ const UserDetails = () => {
         <div>
           <button className="userdetails-back__btn">
             <Link to="/admin/userlist">
-              Üye Listesi <i class="fa-solid fa-arrow-left"></i>{" "}
+              Üye Listesi <i className="fa-solid fa-arrow-left"></i>{" "}
             </Link>
           </button>
         </div>
@@ -316,7 +316,7 @@ const UserDetails = () => {
               <input
                 type="text"
                 id="photos"
-                value={photos}
+                value={photos || ''}
                 onChange={(e) => setPhotos(e.target.value)}
               />
             </div>
@@ -337,7 +337,7 @@ const UserDetails = () => {
               <input
                 type="text"
                 id="video"
-                value={video}
+                value={video || ''}
                 onChange={(e) => setVideo(e.target.value)}
               />
             
@@ -349,7 +349,7 @@ const UserDetails = () => {
                 <input
                   type="text"
                   id="name"
-                  value={name}
+                  value={name || ''}
                   onChange={(e) => setName(e.target.value)}
                 />
               </div>
@@ -358,7 +358,7 @@ const UserDetails = () => {
                 <input
                   type="text"
                   id="email"
-                  value={email}
+                  value={email || ''}
                   onChange={(e) => setEmail(e.target.value)}
                 />
               </div>
@@ -370,7 +370,7 @@ const UserDetails = () => {
                 <input
                   type="text"
                   id="date"
-                  value={reservationInfo.date}
+                  value={reservationInfo.date || ''}
                   onChange={(e) =>
                     setReservationInfo((prevState) => {
                       return { ...prevState, date: e.target.value };
@@ -383,7 +383,7 @@ const UserDetails = () => {
                 <input
                   type="text"
                   id="hour"
-                  value={reservationInfo.hour}
+                  value={reservationInfo.hour || ''}
                   onChange={(e) =>
                     setReservationInfo((prevState) => {
                       return { ...prevState, hour: e.target.value };
@@ -396,7 +396,7 @@ const UserDetails = () => {
                 <input
                   type="text"
                   id="place"
-                  value={reservationInfo.place}
+                  value={reservationInfo.place || ''}
                   onChange={(e) =>
                     setReservationInfo((prevState) => {
                       return { ...prevState, place: e.target.value };
@@ -409,7 +409,7 @@ const UserDetails = () => {
                 <input
                   type="number"
                   id="packagePrice"
-                  value={reservationInfo.packagePrice}
+                  value={reservationInfo.packagePrice || ''}
                   onChange={(e) =>
                     setReservationInfo((prevState) => {
                       return { ...prevState, packagePrice: e.target.value };
@@ -422,7 +422,7 @@ const UserDetails = () => {
                 <input
                   type="number"
                   id="advancePayment"
-                  value={reservationInfo.advancePayment}
+                  value={reservationInfo.advancePayment || ''}
                   onChange={(e) =>
                     setReservationInfo((prevState) => {
                       return { ...prevState, advancePayment: e.target.value };
@@ -435,7 +435,7 @@ const UserDetails = () => {
                 <input
                   type="text"
                   id="packageDetails"
-                  value={reservationInfo.packageDetails}
+                  value={reservationInfo.packageDetails || ''}
                   onChange={(e) =>
                     setReservationInfo((prevState) => {
                       return { ...prevState, packageDetails: e.target.value };
@@ -450,7 +450,7 @@ const UserDetails = () => {
                 <input
                   type="text"
                   id="packageDetails"
-                  value={album}
+                  value={album || ''}
                   onChange={(e) => setAlbum(e.target.value)}
                 />
               </div>
@@ -461,7 +461,7 @@ const UserDetails = () => {
                 <input
                   type="text"
                   id="adress"
-                  value={deliveryInfo.adress}
+                  value={deliveryInfo.adress || ''}
                   onChange={(e) =>
                     setDeliveryInfo((prevState) => {
                       return { ...prevState, adress: e.target.value };
@@ -474,7 +474,7 @@ const UserDetails = () => {
                 <input
                   type="text"
                   id="phoneNumber"
-                  value={deliveryInfo.phoneNumber}
+                  value={deliveryInfo.phoneNumber || ''}
                   onChange={(e) =>
                     setDeliveryInfo((prevState) => {
                       return { ...prevState, phoneNumber: e.target.value };

@@ -52,7 +52,7 @@ const {success: successDelete ,loading:loadingDelete} = userDelete
 <button className='userlist-new'>
       <Link to="/admin/register" >Yeni Kullanıcı</Link></button>
 <div>
-<label for="month">Aya Göre Filtrele</label>
+<label htmlFor="month">Aya Göre Filtrele</label>
 
 <select onChange={filterHandler} name="month" id="month" className="userlist-filter">
 <optgroup label="Aylar" className="userlist-as">
@@ -75,7 +75,7 @@ const {success: successDelete ,loading:loadingDelete} = userDelete
 </div>
 {userList.loading ? <Loader/> :
 <div className="table-container">
-<table class="fl-table">
+<table className="fl-table">
         <thead>
         <tr>
             <th>isim</th>
@@ -99,7 +99,7 @@ const {success: successDelete ,loading:loadingDelete} = userDelete
           return (
             
          user.name !== 'Admin User' &&
-        <UserCard key={user.id}
+        <UserCard key={index}
         email = {user.email} 
         name = {user.name} 
         reservationInfo = {user.reservationInfo} 
@@ -119,7 +119,7 @@ const {success: successDelete ,loading:loadingDelete} = userDelete
           return (
             
        
-        <UserCard key={user.id}
+        <UserCard key={index}
         email = {user.email} 
         name = {user.name} 
         reservationInfo = {user.reservationInfo} 

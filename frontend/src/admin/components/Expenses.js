@@ -20,10 +20,10 @@ const Expenses = () => {
   const expenseList = useSelector((state) => state.expense.expenseList);
   const expenseCreate = useSelector((state) => state.expense.expenseCreate);
   const expenseDelete = useSelector((state) => state.expense.expenseDelete);
-  const {success:expenseDeleteSuccess, loading:expenseDeleteLoading} = expenseDelete;
-  const {success:expenseSucces, loading:createLoading} = expenseCreate;
+  const {success:expenseDeleteSuccess} = expenseDelete;
+  const {success:expenseSucces } = expenseCreate;
 
-  const { error, success, loading, expenses } = expenseList;
+  const { error, loading, expenses } = expenseList;
   useEffect(() => {
     dispatch(listUsers());
     dispatch(listExpenses());
@@ -78,7 +78,7 @@ const Expenses = () => {
         </form>
         {loading ? <Loader /> : 
         <div className="table-container">
-          <table class="fl-table">
+          <table className="fl-table">
             <thead>
               <tr>
                 <th>DESCRIPTION</th>
@@ -115,7 +115,7 @@ const Expenses = () => {
                     </tr>
                   );
                 })}
-                <tr>   <td></td>
+                <tr>   
                 <td>TOPLAM</td><td>{" "} 
               {expenses
                 .map((expense) => expense.price)

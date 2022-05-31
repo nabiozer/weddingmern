@@ -6,18 +6,18 @@ const LoginForm = () => {
 	<form >
       <div className='control-group'>
         <div >
-          <label htmlFor='name'>First Name</label>
+          <label htmlFor='email'>First Name</label>
           <input
-            type='text'
-            id='name'
+            type='email' required
+            id='email'
           />
           
         </div>
         <div >
-          <label htmlFor='name'>Last Name</label>
+          <label htmlFor='pass'>Last Name</label>
           <input
-            type='text'
-            id='name'
+            type='password' required minLength='6'
+            id='pass'
           />
          
         </div>

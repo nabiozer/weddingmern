@@ -10,8 +10,9 @@
   align-items: center;
 }
 
+
 .nav-links li {
-  margin: 1rem;
+  margin: 0.5rem;
 }
 
 .nav-links a {
@@ -49,8 +50,15 @@
   background: #292929;
   color: white;
 }
+@media screen and (min-width: 768px) and (max-width: 810px) {
+  .nav-links__social {
+    display: none;
+  }
+}
+
 
 @media (min-width: 768px) {
+
   .nav-links {
     flex-direction: row;
   }
@@ -103,13 +111,14 @@
   overflow: hidden;
 }
 
+
 /* Dropdown button */
 .dropdown .dropbtn {
   font-size: 16px;
   border: none;
   outline: none;
   color: white;
-  padding: 14px 16px;
+  padding: 14px 0.5rem;
   background-color: inherit;
   font-family: inherit; /* Important for vertical align on mobile phones */
   margin: 0; /* Important for vertical align on mobile phones */

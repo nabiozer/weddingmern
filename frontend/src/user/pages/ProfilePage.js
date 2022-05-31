@@ -5,7 +5,7 @@ import {
  
 } from "react-router-dom";
 import { useSelector, useDispatch } from "react-redux";
-import { getUserDetails ,listUsers} from "../../store/user-actions";
+import { getUserDetails } from "../../store/user-actions";
 
 
 import "./RegisterPage.css";
@@ -20,7 +20,7 @@ const ProfilePage = () => {
   const history = useHistory();
 
   const userDetails = useSelector((state) => state.user.userDetails);
-  const { loading, error, user } = userDetails;
+  const { loading, user } = userDetails;
 
   const userLogin = useSelector((state) => state.user.userLogin);
   const { userInfo } = userLogin;
